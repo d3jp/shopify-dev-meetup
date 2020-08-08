@@ -1,0 +1,34 @@
+<p>section/front-slider.liquidの中身</p>
+
+{% render 'test-snippets' %}
+
+<ul>
+    <li>
+        {% for block in section.blocks %}
+            {{ block.settings.shopname }}
+        {% endfor %}
+    </li>
+</ul>
+
+{% schema %}
+{
+    "blocks": [
+        {
+            "type": "shop",
+            "name": "shop",
+            "settings": [
+                {
+                    "id": "shopname",
+                    "type": "text",
+                    "label": "ショップ名"
+                },
+                {
+                    "id": "address",
+                    "type": "textarea",
+                    "label": "住所"
+                }
+            ]
+        }
+    ]
+}
+{% endschema %}

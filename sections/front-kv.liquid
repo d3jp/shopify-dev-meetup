@@ -1,0 +1,17 @@
+<p>section/front-kv.liquidの中身</p>
+<p>{{ section.settings.header }}</p>
+
+
+{% schema %}
+  {
+    "name": "Slideshow",
+    "settings": [
+      {
+        "id": "header",
+        "type": "text",
+        "label": "Header",
+        "default": "Hello world"
+      }
+    ]
+  }
+{% endschema %}
